@@ -7,7 +7,7 @@ async function getProjects() {
   let json = await res.json();
   var data = await (
     await fetch(
-      `https://spore.us.to:4000/userProjectsScratch/${json.user.username}/`
+      `https://blocklive.atticat.tech/userProjectsScratch/${json.user.username}/`
     )
   ).json();
   data.forEach(function (project) {

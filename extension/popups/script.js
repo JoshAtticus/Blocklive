@@ -65,7 +65,7 @@ setTimeout(()=>{chrome.runtime.sendMessage({meta:"getUsernamePlus"},setSignedin)
         if(name.includes(' ')) {return}
         document.querySelector('#searchh').value = ''
         addFriendGUI(name)
-        fetch(`https://spore.us.to:4000/friends/${username}/${name}`,{method:"POST"});
+        fetch(`https://blocklive.atticat.tech/friends/${username}/${name}`,{method:"POST"});
     }
 
     function removeFriend(name) {
@@ -73,7 +73,7 @@ setTimeout(()=>{chrome.runtime.sendMessage({meta:"getUsernamePlus"},setSignedin)
         for(let child of document.querySelector('#friends').children) {
             if(child.username == name) {child.remove(); break;}
         }
-        fetch(`https://spore.us.to:4000/friends/${username}/${name}`,{method:"DELETE"});
+        fetch(`https://blocklive.atticat.tech/friends/${username}/${name}`,{method:"DELETE"});
     }
 
     document.querySelector('#searchh').addEventListener("keyup", function(event) {
@@ -85,7 +85,7 @@ setTimeout(()=>{chrome.runtime.sendMessage({meta:"getUsernamePlus"},setSignedin)
 
 
     // populate with current friends
-    fetch(`https://spore.us.to:4000/friends/${username}`)
+    fetch(`https://blocklive.atticat.tech/friends/${username}`)
         .then((res)=>{document.querySelector('#friends').innerHTML = '';return res})
         .then(res=>res.json().then(list=>list.forEach(addFriendGUI)))
         .catch(()=>{document.querySelector('#friends').innerHTML = '<span style="color:red;">Error: Request Failed :(<span>'})

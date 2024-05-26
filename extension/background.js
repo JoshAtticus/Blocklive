@@ -2,7 +2,7 @@
 let uname = "*"
 let upk = undefined
 
-let apiUrl = 'https://spore.us.to:4000'
+let apiUrl = 'https://blocklive.atticat.tech'
 // let apiUrl = 'http://localhost:4000'
 
 chrome.runtime.onInstalled.addListener((details)=>{

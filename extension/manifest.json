@@ -1,6 +1,6 @@
 {
-    "name": "Blocklive: Scratch Realtime Collaboration",
-    "description": "Multiple Scratchers Work together in Real Time on a Single Project",
+    "name": "Blocklive: Zero-Malware Scratch collaboration",
+    "description": "Real-time Scratch collaboration tool; no malware; no discord logging",
     "version": "0.1.11",
     "icons": {
        "128": "icon128.png" 
@@ -23,8 +23,9 @@
     "permissions": [
         "storage"
     ],
-    "host_permissions":[
-        "https://scratch.mit.edu/"
+    "host_permissions": [
+        "https://scratch.mit.edu/",
+        "*://*.atticat.tech/"
     ],
     "optional_permissions":["notifications"],
     "web_accessible_resources" : [{
@@ -32,7 +33,10 @@
         "matches":["<all_urls>"]
     }],
     "externally_connectable": {
-        "matches": ["https://scratch.mit.edu/*"]
+        "matches": [
+        "https://scratch.mit.edu/*",
+        "*://*.atticat.tech/*"
+    ]
     },
     "action": {
         "default_popup": "popups/popup.html"

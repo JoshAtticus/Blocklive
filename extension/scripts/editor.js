@@ -1,5 +1,5 @@
 console.log('CollabLive Editor Inject Running...')
-apiUrl = 'https://spore.us.to:4000'
+apiUrl = 'https://blocklive.atticat.tech'
 
 // get exId
 const exId = document.querySelector(".blocklive-ext").dataset.exId
